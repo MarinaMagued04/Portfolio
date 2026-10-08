@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marina Magued Darwich | DevOps & Cloud Engineer Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['Fira Code', 'monospace'],
+                    },
+                    colors: {
+                        dark: {
+                            900: '#0a0f1d',
+                            800: '#111827',
+                            700: '#1f293d',
+                            600: '#374151',
+                        },
+                        accent: {
+                            500: '#0ea5e9',
+                            400: '#38bdf8',
+                            600: '#0284c7',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0f1d;
+            color: #f3f4f6;
+        }
+        .glow-accent {
+            box-shadow: 0 0 25px rgba(14, 165, 233, 0.25);
+        }
+        .glow-card:hover {
+            box-shadow: 0 0 20px rgba(14, 165, 233, 0.15);
+            border-color: rgba(14, 165, 233, 0.4);
+        }
+    </style>
+</head>
+<body class="bg-dark-900 text-gray-100 selection:bg-accent-500 selection:text-dark-900">
+
+    <header class="fixed top-0 left-0 right-0 z-50 bg-dark-900/80 backdrop-blur-md border-b border-dark-700/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#hero" class="text-xl font-bold font-mono tracking-tight text-white flex items-center gap-2">
+                <span class="text-accent-400">&lt;</span>Marina<span class="text-accent-400">/&gt;</span>
+            </a>
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-300">
+                <a href="#about" class="hover:text-accent-400 transition-colors">About</a>
+                <a href="#projects" class="hover:text-accent-400 transition-colors">Projects</a>
+                <a href="#training" class="hover:text-accent-400 transition-colors">Training</a>
+                <a href="#skills" class="hover:text-accent-400 transition-colors">Skills</a>
+                <a href="#education" class="hover:text-accent-400 transition-colors">Education</a>
+                <a href="#contact" class="px-4 py-2 rounded-lg bg-accent-500 text-dark-900 font-semibold hover:bg-accent-400 transition-all shadow-lg shadow-accent-500/20">Contact Me</a>
+            </nav>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white focus:outline-none">
+                <i class="fa-solid fa-bars text-xl"></i>
+            </button>
+        </div>
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-dark-800 border-b border-dark-700 px-6 py-4 space-y-3">
+            <a href="#about" class="block text-gray-300 hover:text-accent-400">About</a>
+            <a href="#projects" class="block text-gray-300 hover:text-accent-400">Projects</a>
+            <a href="#training" class="block text-gray-300 hover:text-accent-400">Training</a>
+            <a href="#skills" class="block text-gray-300 hover:text-accent-400">Skills</a>
+            <a href="#education" class="block text-gray-300 hover:text-accent-400">Education</a>
+            <a href="#contact" class="block text-accent-400 font-semibold">Contact Me</a>
+        </div>
+    </header>
+
+    <section id="hero" class="min-h-screen flex items-center justify-center pt-20 pb-16 px-4 relative overflow-hidden">
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-accent-500/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-dark-700/60 border border-dark-600 text-accent-400 text-xs font-mono mb-6">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Available for Opportunities
+            </div>
+            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-white tracking-tight mb-6">
+                Hi, I'm <span class="bg-gradient-to-r from-accent-400 to-cyan-200 bg-clip-text text-transparent">Marina Magued</span>
+            </h1>
+            <p class="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed font-light">
+                Senior Computer Engineering Undergraduate specializing in <span class="text-accent-400 font-medium">DevOps Engineering</span> and <span class="text-accent-400 font-medium">Cloud Computing</span>. Building scalable infrastructure and automated CI/CD pipelines.
+            </p>
+            <div class="flex flex-wrap items-center justify-center gap-4">
+                <a href="#projects" class="px-8 py-3.5 rounded-xl bg-accent-500 text-dark-900 font-bold hover:bg-accent-400 transition-all glow-accent flex items-center gap-2">
+                    <i class="fa-solid fa-code-branch"></i> View Projects
+                </a>
+                <a href="#contact" class="px-8 py-3.5 rounded-xl bg-dark-800 border border-dark-600 text-white font-semibold hover:bg-dark-700 transition-all flex items-center gap-2">
+                    <i class="fa-solid fa-envelope">Get in Touch</i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 bg-dark-800/40 border-y border-dark-700/50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-white tracking-tight sm:text-4xl">About Me</h2>
+                <div class="w-16 h-1 bg-accent-500 mx-auto mt-3 rounded-full"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+                <div class="md:col-span-1 flex justify-center">
+                    <div class="w-48 h-48 rounded-2xl bg-gradient-to-tr from-accent-500 to-cyan-300 p-1 glow-accent">
+                        <div class="w-full h-full bg-dark-800 rounded-2xl flex items-center justify-center">
+                            <i class="fa-solid fa-terminal text-6xl text-accent-400"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:col-span-2 space-y-4">
+                    <h3 class="text-xl font-semibold text-white">Professional Objective</h3>
+                    <p class="text-gray-300 leading-relaxed text-base sm:text-lg font-light">
+                        Motivated senior Computer Engineering undergraduate specializing in DevOps engineering and cloud computing, with hands-on experience in containerization, Linux environments, and automated infrastructure. Eager to leverage technical expertise in CI/CD pipelines and cloud-native technologies to optimize deployment workflows and system reliability.
+                    </p>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-4">
+                        <div class="p-3 rounded-xl bg-dark-800 border border-dark-700">
+                            <span class="block text-accent-400 font-bold text-lg">Senior</span>
+                            <span class="text-xs text-gray-400">Computer Eng. Student</span>
+                        </div>
+                        <div class="p-3 rounded-xl bg-dark-800 border border-dark-700">
+                            <span class="block text-accent-400 font-bold text-lg">DEPI</span>
+                            <span class="text-xs text-gray-400">DevOps Trainee</span>
+                        </div>
+                        <div class="p-3 rounded-xl bg-dark-800 border border-dark-700 col-span-2 sm:col-span-1">
+                            <span class="block text-accent-400 font-bold text-lg">Fluent</span>
+                            <span class="text-xs text-gray-400">English & French</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-white tracking-tight sm:text-4xl">Featured Projects</h2>
+                <div class="w-16 h-1 bg-accent-500 mx-auto mt-3 rounded-full"></div>
+                <p class="text-gray-400 mt-3 max-w-xl mx-auto">Practical implementations showcasing containerization, automation, and infrastructure orchestration.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-dark-800 border border-dark-700 rounded-2xl p-6 sm:p-8 glow-card transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="p-3 rounded-xl bg-accent-500/10 text-accent-400">
+                                <i class="fa-solid fa-server text-2xl"></i>
+                            </div>
+                            <span class="text-xs font-mono px-3 py-1 rounded-full bg-dark-700 text-gray-300">Docker & Compose</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Containerized Multi-Tier Web Application</h3>
+                        <p class="text-sm font-mono text-accent-400 mb-4">Tech Stack: Docker, Docker Compose, Nginx, Redis / Node.js, Linux</p>
+                        <ul class="space-y-2.5 text-gray-300 text-sm mb-6">
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-chevron-right text-accent-400 text-xs mt-1.5"></i>
+                                <span>Architected and containerized a multi-tier application environment using Docker, separating the web server, application runtime, and caching layers into isolated containers.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-chevron-right text-accent-400 text-xs mt-1.5"></i>
+                                <span>Configured custom Docker bridge networks for secure inter-container communication and set up persistent volumes to ensure data integrity across container restarts.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-chevron-right text-accent-400 text-xs mt-1.5"></i>
+                                <span>Implemented an Nginx reverse proxy container to handle incoming traffic load balancing and route requests efficiently to backend services.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-dark-800 border border-dark-700 rounded-2xl p-6 sm:p-8 glow-card transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="p-3 rounded-xl bg-accent-500/10 text-accent-400">
+                                <i class="fa-solid fa-arrows-split-up-and-left text-2xl"></i>
+                            </div>
+                            <span class="text-xs font-mono px-3 py-1 rounded-full bg-dark-700 text-gray-300">CI/CD Automation</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Automated CI/CD Pipeline with GitHub Actions</h3>
+                        <p class="text-sm font-mono text-accent-400 mb-4">Tech Stack: GitHub Actions, Docker, Linux, Git</p>
+                        <ul class="space-y-2.5 text-gray-300 text-sm mb-6">
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-chevron-right text-accent-400 text-xs mt-1.5"></i>
+                                <span>Designed and implemented an automated Continuous Integration and Continuous Deployment (CI/CD) pipeline to streamline software release cycles.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-chevron-right text-accent-400 text-xs mt-1.5"></i>
+                                <span>Configured automated workflows to trigger on code pushes, executing linting, unit testing, and building optimized Docker images.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-chevron-right text-accent-400 text-xs mt-1.5"></i>
+                                <span>Integrated automated pushing of validated container images to a registry to ensure seamless and error-free code delivery.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="training" class="py-20 bg-dark-800/40 border-y border-dark-700/50">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-white tracking-tight sm:text-4xl">Specialized Training</h2>
+                <div class="w-16 h-1 bg-accent-500 mx-auto mt-3 rounded-full"></div>
+            </div>
+            
+            <div class="bg-dark-800 border border-dark-700 rounded-2xl p-6 sm:p-8 glow-card">
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6 pb-6 border-b border-dark-700">
+                    <div>
+                        <span class="text-xs font-mono px-3 py-1 rounded-full bg-accent-500/10 text-accent-400">July 2026 – Present</span>
+                        <h3 class="text-2xl font-bold text-white mt-2">Digital Egypt Pioneers Initiative (DEPI)</h3>
+                        <p class="text-accent-400 font-medium">DevOps Engineering Track | Ministry of Communications and Information Technology, Cairo, Egypt</p>
+                    </div>
+                </div>
+                <div class="space-y-4 text-gray-300 text-sm sm:text-base leading-relaxed">
+                    <p>
+                        Completed an intensive professional training program focused on modern DevOps methodologies, cloud infrastructure, and automation toolchains.
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+                        <div class="flex items-center gap-3 bg-dark-900/60 p-3 rounded-xl border border-dark-700">
+                            <i class="fa-brands fa-linux text-accent-400 text-lg"></i>
+                            <span>Linux Administration & Shell Scripting</span>
+                        </div>
+                        <div class="flex items-center gap-3 bg-dark-900/60 p-3 rounded-xl border border-dark-700">
+                            <i class="fa-solid fa-cubes text-accent-400 text-lg"></i>
+                            <span>Docker & Docker Compose Containerization</span>
+                        </div>
+                        <div class="flex items-center gap-3 bg-dark-900/60 p-3 rounded-xl border border-dark-700">
+                            <i class="fa-solid fa-code-pull-request text-accent-400 text-lg"></i>
+                            <span>CI/CD Pipelines (GitHub Actions / Jenkins)</span>
+                        </div>
+                        <div class="flex items-center gap-3 bg-dark-900/60 p-3 rounded-xl border border-dark-700">
+                            <i class="fa-solid fa-cloud text-accent-400 text-lg"></i>
+                            <span>Infrastructure as Code (Terraform & Ansible)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-white tracking-tight sm:text-4xl">Technical Skills</h2>
+                <div class="w-16 h-1 bg-accent-500 mx-auto mt-3 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Skill Category 1 -->
+                <div class="bg-dark-800 border border-dark-700 rounded-2xl p-6 glow-card">
+                    <div class="flex items-center gap-3 mb-4 text-accent-400">
+                        <i class="fa-solid fa-layer-group text-xl"></i>
+                        <h3 class="font-bold text-white text-lg">DevOps & Containerization</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 rounded-lg bg-dark-700/80 text-gray-300 text-xs font-mono">Docker</span>
+                        <span class="px-3 py-1 rounded-lg bg-dark-700/80 text-gray-300 text-xs font-mono">Docker Compose</span>
+                        <span class="px-3 py-1 rounded-lg bg-dark-700/80 text-gray-300 text-xs font-mono">Containerization</span>
+                        <span class="px-3 py-1 rounded-lg bg-dark-700/80 text-gray-300 text-xs font-mono">Microservices</span>
+                        <span class="px-3 py-1 rounded-lg bg-dark-700/80 text-gray-300 text-xs font-mono">CI/CD Pipelines (GitHub Actions)</span>
+                    </div>
+                </div>
+
+                <!-- Skill Category 2 -->
+                <div class="bg-dark-800 border border-dark-700 rounded-2xl p-6 glow-card">
+                    <div class="flex items-center gap-3 mb-4 text-accent-400">
+                        <i class="fa-solid fa-cloud-arrow-up text-xl"></i>
+                        <h3 class="font-bold text-white text-lg">Cloud & Infrastructure</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 rounded-lg bg-dark-700/80 text-gray-300 text-xs font-mono">Cloud Computing</span>
+                        <span class="px-3 py-1 rounded-lg bg-dark-700/80 text-gray-300 text-xs font-mono">Terraform (IaC)</span>
+                        <span class="px-3 py-1 rounded-lg bg-dark-700/80 text-gray-300 text-xs font-mono">Kubernetes (Basic)</span>
+                    </div>
+                </div>
+
+                <!-- Skill Category 3 -->
+                <div class="bg-dark-800 border border-dark-700 rounded-2xl p-6 glow-card">
+                    <div class="flex items-center gap-3 mb-4 text-accent-400">
+                        <i class="fa-solid fa-terminal text-xl"></i>
+                        <h3 class="font-bold text-white text-lg">OS & Scripting</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 rounded-lg bg-dark-700/80 text-gray-300 text-xs font-mono">Linux (Ubuntu/Debian)</span>
+                        <span class="px-3 py-1 rounded-lg bg-dark-700/80 text-gray-300 text-xs font-mono">Bash Scripting</span>
+                        <span class="px-3 py-1 rounded-lg bg-dark-700/80 text-gray-300 text-xs font-mono">Process Monitoring</span>
+                        <span class="px-3 py-1 rounded-lg bg-dark-700/80 text-gray-300 text-xs font-mono">File Permissions</span>
+                    </div>
+                </div>
+
+                <!-- Skill Category 4 -->
+                <div class="bg-dark-800 border border-dark-700 rounded-2xl p-6 glow-card">
+                    <div class="flex items-center gap-3 mb-4 text-accent-400">
+                        <i class="fa-solid fa-network-wired text-xl"></i>
+                        <h3 class="font-bold text-white text-lg">Networking Fundamentals</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 rounded-lg bg-dark-700/80 text-gray-300 text-xs font-mono">TCP/IP</span>
+                        <span class="px-3 py-1 rounded-lg bg-dark-700/80 text-gray-300 text-xs font-mono">Subnetting</span>
+                        <span class="px-3 py-1 rounded-lg bg-dark-700/80 text-gray-300 text-xs font-mono">VLAN Segmentation</span>
+                        <span class="px-3 py-1 rounded-lg bg-dark-700/80 text-gray-300 text-xs font-mono">Routing</span>
+                        <span class="px-3 py-1 rounded-lg bg-dark-700/80 text-gray-300 text-xs font-mono">Firewalls & ACLs</span>
+                    </div>
+                </div>
+
+                <!-- Skill Category 5 -->
+                <div class="bg-dark-800 border border-dark-700 rounded-2xl p-6 glow-card">
+                    <div class="flex items-center gap-3 mb-4 text-accent-400">
+                        <i class="fa-solid fa-code text-xl"></i>
+                        <h3 class="font-bold text-white text-lg">Programming & DBs</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 rounded-lg bg-dark-700/80 text-gray-300 text-xs font-mono">Python</span>
+                        <span class="px-3 py-1 rounded-lg bg-dark-700/80 text-gray-300 text-xs font-mono">C / C++</span>
+                        <span class="px-3 py-1 rounded-lg bg-dark-700/80 text-gray-300 text-xs font-mono">SQL</span>
+                        <span class="px-3 py-1 rounded-lg bg-dark-700/80 text-gray-300 text-xs font-mono">Git & Version Control</span>
+                        <span class="px-3 py-1 rounded-lg bg-dark-700/80 text-gray-300 text-xs font-mono">Node.js / Express</span>
+                    </div>
+                </div>
+
+                <!-- Skill Category 6 -->
+                <div class="bg-dark-800 border border-dark-700 rounded-2xl p-6 glow-card">
+                    <div class="flex items-center gap-3 mb-4 text-accent-400">
+                        <i class="fa-solid fa-language text-xl"></i>
+                        <h3 class="font-bold text-white text-lg">Languages</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 rounded-lg bg-accent-500/10 text-accent-400 text-xs font-mono font-bold">Arabic (Native)</span>
+                        <span class="px-3 py-1 rounded-lg bg-accent-500/10 text-accent-400 text-xs font-mono font-bold">English (Fluent)</span>
+                        <span class="px-3 py-1 rounded-lg bg-accent-500/10 text-accent-400 text-xs font-mono font-bold">French (Fluent)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="py-20 bg-dark-800/40 border-y border-dark-700/50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-white tracking-tight sm:text-4xl">Education & Certifications</h2>
+                <div class="w-16 h-1 bg-accent-500 mx-auto mt-3 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Academic Education -->
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
+                        <i class="fa-solid fa-graduation-cap text-accent-400"></i> Academic Background
+                    </h3>
+                    <div class="space-y-6">
+                        <div class="bg-dark-800 border border-dark-700 rounded-2xl p-6 relative pl-8 border-l-4 border-l-accent-500">
+                            <span class="text-xs font-mono text-accent-400">Sep 2022 – June 2027</span>
+                            <h4 class="text-lg font-bold text-white mt-1">Bachelor of Computer Engineering</h4>
+                            <p class="text-gray-300 text-sm mt-1">Senior Year Student</p>
+                        </div>
+                        <div class="bg-dark-800 border border-dark-700 rounded-2xl p-6 relative pl-8 border-l-4 border-l-dark-600">
+                            <span class="text-xs font-mono text-gray-400">Completed June 2022</span>
+                            <h4 class="text-lg font-bold text-white mt-1">High School Diploma</h4>
+                            <p class="text-gray-300 text-sm mt-1">Notre Dame des Apotres – Francais, Cairo, Egypt</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Professional Certifications -->
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
+                        <i class="fa-solid fa-certificate text-accent-400"></i> Certifications & Courses
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="bg-dark-800 border border-dark-700 rounded-2xl p-4 flex items-center justify-between">
+                            <div>
+                                <h4 class="font-bold text-white text-sm sm:text-base">CCNA: Introduction to Networks</h4>
+                                <span class="text-xs font-mono text-accent-400">Jul 2025 – Sep 2025</span>
+                            </div>
+                            <i class="fa-solid fa-award text-accent-400 text-2xl"></i>
+                        </div>
+                        <div class="bg-dark-800 border border-dark-700 rounded-2xl p-4 flex items-center justify-between">
+                            <div>
+                                <h4 class="font-bold text-white text-sm sm:text-base">CCNA: Switching, Routing & Wireless Essentials</h4>
+                                <span class="text-xs font-mono text-accent-400">Aug 2025 – Sep 2025</span>
+                            </div>
+                            <i class="fa-solid fa-award text-accent-400 text-2xl"></i>
+                        </div>
+                        <div class="bg-dark-800 border border-dark-700 rounded-2xl p-4 flex items-center justify-between">
+                            <div>
+                                <h4 class="font-bold text-white text-sm sm:text-base">CCNA: Enterprise Networking, Security & Automation</h4>
+                                <span class="text-xs font-mono text-accent-400">Sep 2025</span>
+                            </div>
+                            <i class="fa-solid fa-award text-accent-400 text-2xl"></i>
+                        </div>
+                        <div class="bg-dark-800 border border-dark-700 rounded-2xl p-4 flex items-center justify-between">
+                            <div>
+                                <h4 class="font-bold text-white text-sm sm:text-base">HCIA-Datacom Training Course</h4>
+                                <span class="text-xs font-mono text-accent-400">Huawei ICT Academy • Jun 2025 – Jul 2025</span>
+                            </div>
+                            <i class="fa-solid fa-award text-accent-400 text-2xl"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold text-white tracking-tight sm:text-4xl">Get In Touch</h2>
+            <div class="w-16 h-1 bg-accent-500 mx-auto mt-3 rounded-full mb-6"></div>
+            <p class="text-gray-400 max-w-xl mx-auto mb-12">
+                I'm actively looking for DevOps and Cloud Engineering opportunities. Let's connect and discuss how I can contribute to your team!
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-12">
+                <a href="tel:01202597698" class="bg-dark-800 border border-dark-700 rounded-2xl p-6 glow-card flex flex-col items-center justify-center gap-3 group">
+                    <div class="w-12 h-12 rounded-xl bg-accent-500/10 text-accent-400 flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-phone text-xl"></i>
+                    </div>
+                    <span class="text-sm font-semibold text-gray-300">Phone</span>
+                    <span class="text-xs text-accent-400 font-mono">01202597698</span>
+                </a>
+
+                <a href="mailto:marinamagued097@gmail.com" class="bg-dark-800 border border-dark-700 rounded-2xl p-6 glow-card flex flex-col items-center justify-center gap-3 group">
+                    <div class="w-12 h-12 rounded-xl bg-accent-500/10 text-accent-400 flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-envelope text-xl"></i>
+                    </div>
+                    <span class="text-sm font-semibold text-gray-300">Email</span>
+                    <span class="text-xs text-accent-400 font-mono">marinamagued097@gmail.com</span>
+                </a>
+
+                <a href="https://www.linkedin.com/in/marina-magued-794558316" target="_blank" class="bg-dark-800 border border-dark-700 rounded-2xl p-6 glow-card flex flex-col items-center justify-center gap-3 group">
+                    <div class="w-12 h-12 rounded-xl bg-accent-500/10 text-accent-400 flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <i class="fa-brands fa-linkedin-in text-xl"></i>
+                    </div>
+                    <span class="text-sm font-semibold text-gray-300">LinkedIn</span>
+                    <span class="text-xs text-accent-400 font-mono">View Profile</span>
+                </a>
+            </div>
+
+            <footer class="pt-8 border-t border-dark-700/50 text-gray-500 text-sm">
+                <p>&copy; 2026 Marina Magued Darwich. All rights reserved.</p>
+            </footer>
+        </div>
+    </section>
+
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on click
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
